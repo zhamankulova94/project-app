@@ -1,0 +1,17 @@
+.app-wrapper{
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-template-areas: 
+  'h h'
+  'n c';
+}
+img{
+  max-width: 100%;
+}
+
+
