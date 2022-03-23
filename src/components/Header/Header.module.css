@@ -1,0 +1,8 @@
+.header{
+  padding: 10px;
+ grid-area: h;
+ background-color: #FFBD73;
+ }
+ .header__img{
+   height: 100%;
+ }
