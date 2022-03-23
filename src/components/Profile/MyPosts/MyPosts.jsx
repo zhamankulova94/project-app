@@ -2,6 +2,13 @@ import cl from './MyPosts.module.css'
 import Post from './Post/Post'
 
 const MyPosts = () => {
+  let postData = [
+    {id: 1, message: 'Hello, how are you', likesCount: 15},
+    {id: 2, message: 'Where have you been?', likesCount: 22}
+  ]
+
+  let postElements = postData.map(post => <Post message={post.message} likesCount={post.likesCount} />)
+
  return(
   <div className={cl.container_posts}>    
       My Posts
@@ -14,8 +21,7 @@ const MyPosts = () => {
         </div>
       </div> 
     <div className={cl.posts}>
-      <Post message='Hello, how are you' likesCount='15' />
-      <Post message='Where have you been?' likesCount='22' />
+      {postElements}
     </div>
   </div>
  )

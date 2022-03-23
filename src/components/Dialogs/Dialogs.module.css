@@ -9,11 +9,12 @@
 color: gold;
 }
 .dialog{
- 
+ color: #f3f3f3;
+}
+.dialog a{
+ text-decoration: none;
+ color: #fff;
 }
 .messages{
  padding: 10px;
-}
-.message{
-
 }
