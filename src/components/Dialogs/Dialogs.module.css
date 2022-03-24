@@ -5,11 +5,11 @@
 .dialogs_items{
  padding: 10px;
 }
-.dialog.active{
-color: gold;
-}
 .dialog{
  color: #f3f3f3;
+}
+.dialog a.active{
+color: gold;
 }
 .dialog a{
  text-decoration: none;

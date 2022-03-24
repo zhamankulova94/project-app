@@ -5,8 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <App postData={postData} dialogsData={dialogsData} messageData={messageData} />
   </React.StrictMode>,
   document.getElementById('root')
 );
