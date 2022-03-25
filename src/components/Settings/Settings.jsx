@@ -1,9 +1,12 @@
 import cl from './Settings.module.css'
 
-const Settings = () => {
+
+
+const Settings = (props) => {
+    
  return (
   <div>
-   Settings
+      Settings   
   </div>
  )
 }
