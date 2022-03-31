@@ -1,0 +1,16 @@
+.dialog{
+    color: #f3f3f3;
+    margin-bottom: 10px;
+}
+.dialog a.active{
+color: gold;
+}
+.dialog a{
+text-decoration: none;
+color: #fff;
+}
+.dialog img{
+    max-width: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+}

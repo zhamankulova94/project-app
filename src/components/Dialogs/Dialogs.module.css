@@ -5,16 +5,6 @@
 .dialogs_items{
  padding: 10px;
 }
-.dialog{
- color: #f3f3f3;
-}
-.dialog a.active{
-color: gold;
-}
-.dialog a{
- text-decoration: none;
- color: #fff;
-}
 .messages{
  padding: 10px;
 }
