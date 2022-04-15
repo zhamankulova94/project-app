@@ -1,13 +1,16 @@
 import MyPosts from './MyPosts/MyPosts'
-import cl from './Profile.module.css'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 
 const Profile = (props) => {
  return(
   <div>
-        <ProfileInfo />
-        <MyPosts postData={props.data.postData} />       
+      <ProfileInfo />
+      <MyPosts 
+            newPostText={props.newPostText} 
+            postData={props.data.postData} 
+            dispatch={props.dispatch} 
+      />       
   </div>      
  )
 }
