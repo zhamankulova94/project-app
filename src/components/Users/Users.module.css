@@ -1,0 +1,7 @@
+.user{
+    padding: 10px;
+    background-color: gainsboro;
+}
+.user__ava img{
+    max-width: 100px;
+}
