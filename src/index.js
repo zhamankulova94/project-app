@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 
 // let rerenderEntireTree = () => {
     ReactDOM.render(
-         <React.StrictMode>
+        //  <React.StrictMode>
             <BrowserRouter>
               <Provider store={store}>
                   <App 
@@ -20,7 +20,8 @@ import { Provider } from 'react-redux';
                   />
               </Provider>
             </BrowserRouter>
-        </React.StrictMode>,
+        // </React.StrictMode> отключила строгий режим, дублирует массив
+        ,
       document.getElementById('root')
     );
 

@@ -1,20 +1,28 @@
+import * as axios from 'axios'
 import React from 'react'
 import cl from './Users.module.css'
+import userPhoto from '../../assets/images/user-default.jpg';
 
 const Users = (props) => {
+   let getUsers = () => {
     if(props.users.length === 0){
-        props.setUsers([
-            {id: 1, fullName: 'David', status: 'sometext', src: 'https://greenpower.kz/wp-content/uploads/2021/06/663328.png', location: {city: 'Taraz', country:'Kazakhstan'}, followed: true},
-            {id: 2, fullName: 'Bleck', status: 'good bye', src: 'https://greenpower.kz/wp-content/uploads/2021/06/663328.png', location: {city: 'Moscow', country:'Russia'}, followed: false}
-        ])
-    }
+        axios.get('https://social-network.samuraijs.com/api/1.0/users')
+        .then(response =>{
+            props.setUsers(response.data.items)
+    })
+   }
+
+
+}
+
     return (
         <div className={cl.user}>
+            <button onClick={getUsers}>Get users</button>
             {
                 props.users.map( el => <div key={el.id}>
                     <span>
                         <div className={cl.user__ava}>
-                            <img src={el.src} />
+                            <img src={el.photos.small ? el.photos.small : userPhoto } />
                         </div>
                         <div>
                             {el.followed 
@@ -25,7 +33,7 @@ const Users = (props) => {
                     <span>
                         <span>
                             <div>
-                                {el.fullName}
+                                {el.name}
                             </div>
                             <div>
                                 {el.status}
@@ -33,10 +41,10 @@ const Users = (props) => {
                         </span>
                         <span>
                             <div>
-                                {el.location.city}
+                                {"el.location.city"}
                             </div>
                             <div>
-                                {el.location.country}
+                                {"el.location.country"}
                             </div>
                         </span>
                     </span>
